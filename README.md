@@ -58,3 +58,11 @@ Sprees are announced in Unreal Tournament style (also DoTA). Turn up you speaker
 ### Online casinos with roulette games (feel free to add more!):
 
 * http://www.eucasino.com/instant-play.html
+
+### Contribute:
+
+1. Fork the repo
+2. Grab dependencies: `bundle install`
+3. Create a topic branch and make your changes
+4. Test your changes: `bundle exec rake test` (aim for > 90% coverage)
+5. Create a Pull Request
