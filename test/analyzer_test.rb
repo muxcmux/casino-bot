@@ -2,11 +2,7 @@ require 'test_helper'
 
 class AnalyzerTest < MiniTest::Unit::TestCase
   def setup
-    @analyzer = CasinoBot::Analyzer.new 'red'
-    @analyzer.instance_variable_set(:@reference_images, {
-      'black' => ChunkyPNG::Image.from_file(CasinoBot.root << "/test/fixtures/black.png"),
-      'red' => ChunkyPNG::Image.from_file(CasinoBot.root << "/test/fixtures/red.png")
-    })
+    @analyzer = CasinoBot::Analyzer.new 'red', black_ref: '/test/fixtures/black.png', red_ref: '/test/fixtures/red.png'
   end
   
   def test_take_screenshot

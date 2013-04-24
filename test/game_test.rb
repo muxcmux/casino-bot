@@ -2,7 +2,7 @@ require 'test_helper'
 
 class GameTest < MiniTest::Unit::TestCase
   def setup
-    @game = CasinoBot::Game.new
+    @game = CasinoBot::Game.new 0, black_ref: '/test/fixtures/black.png', red_ref: '/test/fixtures/red.png'
   end
   
   def play_and_win win = true
@@ -65,7 +65,7 @@ class GameTest < MiniTest::Unit::TestCase
   end
   
   def test_game_stop
-    game = CasinoBot::Game.new
+    game = CasinoBot::Game.new 0, black_ref: '/test/fixtures/black.png', red_ref: '/test/fixtures/red.png'
     play_and_win
     game.stop!
     assert_equal 0, game.game_time # well, that was a quick game

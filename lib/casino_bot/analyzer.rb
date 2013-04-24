@@ -7,12 +7,14 @@ module CasinoBot
     include ChunkyPNG::Color
     include CasinoBot::Util
     
-    def initialize color
+    def initialize color, options = {}
+      black_ref = options[:black_ref] || '/tmp/black.png'
+      red_ref = options[:red_ref] || '/tmp/red.png'
       @color = color
       @tmpfile = CasinoBot.root << "/tmp/screenshot.png"
       @reference_images = {
-        'black' => ChunkyPNG::Image.from_file(CasinoBot.root << "/tmp/black.png"),
-        'red' => ChunkyPNG::Image.from_file(CasinoBot.root << "/tmp/red.png")
+        'black' => ChunkyPNG::Image.from_file(CasinoBot.root << black_ref),
+        'red' => ChunkyPNG::Image.from_file(CasinoBot.root << red_ref)
       }
     end
     

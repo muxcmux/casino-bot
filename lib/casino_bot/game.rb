@@ -9,7 +9,7 @@ module CasinoBot
     
     attr_reader :starting_balance, :profit, :rounds, :game_time
     
-    def initialize starting_balance = 0
+    def initialize starting_balance = 0, options = {}
       @starting_balance = starting_balance.to_i
       @wager = 1
       @rounds = 0
@@ -19,7 +19,7 @@ module CasinoBot
       @losing_spree_limit = CasinoBot.config['losing_spree_limit'].to_i
       @color = %w(red black).sample
       @bet_placer = CasinoBot::BetPlacer.new @color
-      @analyzer = CasinoBot::Analyzer.new @color
+      @analyzer = CasinoBot::Analyzer.new @color, options
       @game_started_at = DateTime.now
       @game_time = nil
     end
