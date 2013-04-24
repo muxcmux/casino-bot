@@ -1,0 +1,48 @@
+# Uncomment to log to a file rather than stdout
+# log: 'log/bot.log'
+afplay_bin: '/usr/bin/afplay'
+screencapture_bin: '/usr/sbin/screencapture'
+cliclick_bin: 'bin/cliclick'
+# The losing spree limit means that after x consecutive losses
+# the game should stop. So for 8 consecutive losses, you'd have wasted
+# 2 ^ 8 - 1 Euro (255) and your last bet would have been 128
+losing_spree_limit: 8
+screenshot_coordinates:
+  black:
+    x: 1166
+    y: 430
+    width: 50
+    height: 50
+  red:
+    x: 1166
+    y: 430
+    width: 50
+    height: 50
+click_coordinates:
+  red:
+    x: 940
+    y: 690
+  black:
+    x: 1000
+    y: 730
+  spin:
+    x: 1280
+    y: 920
+  100:
+    x: 846
+    y: 798
+  25:
+    x: 810
+    y: 769
+  10:
+    x: 780
+    y: 747
+  5:
+    x: 748
+    y: 726
+  1:
+    x: 710
+    y: 700
+  focus_window:
+    x: 1400
+    y: 870

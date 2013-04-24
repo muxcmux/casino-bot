@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/casino_bot'
+include CasinoBot::Util
+
+game = CasinoBot::Game.new ARGV[0] || 0
+
+logger.info("Game has started.")
+
+at_exit do
+  game.stop!
+  logger.info("Game has ended.")
+  logger.info("Played rounds    : #{format_number(game.rounds)}")
+  logger.info("Net profit/loss  : #{format_number(game.profit)} EUR")
+  logger.info("Starting balance : #{format_number(game.starting_balance)} EUR")
+  logger.info("Ending balance   : #{format_number(game.starting_balance + game.profit)} EUR")
+  logger.info("Game time        : #{time_in_words(game.game_time)}")
+end
+
+game.play! while true
