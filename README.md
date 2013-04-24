@@ -1,5 +1,7 @@
 # Casino bot
 
+[![Build Status](https://travis-ci.org/muxcmux/casino-bot.png?branch=master)](https://travis-ci.org/muxcmux/casino-bot)
+
 A tiny program that will make you rich beyond all measure! (nah, it probably won't)
 
 ### You need:
