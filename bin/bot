@@ -3,7 +3,7 @@
 require_relative '../lib/casino_bot'
 include CasinoBot::Util
 
-game = CasinoBot::Game.new ARGV[0] || 0
+game = CasinoBot::Game.new ARGV[0].to_i
 
 logger.info("Game has started.")
 
