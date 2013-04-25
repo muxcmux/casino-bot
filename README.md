@@ -66,3 +66,7 @@ Sprees are announced in Unreal Tournament style (also DoTA). Turn up you speaker
 3. Create a topic branch and make your changes
 4. Test your changes: `bundle exec rake test` (aim for > 90% coverage)
 5. Create a Pull Request
+
+### License
+
+Do whatever the fuck you want, but don't blame me for the big hole in your bank account.
