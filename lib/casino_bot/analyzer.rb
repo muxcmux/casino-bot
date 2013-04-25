@@ -4,6 +4,7 @@ require 'casino_bot/util'
 
 module CasinoBot
   class Analyzer
+    attr_accessor :tmpfile
     include ChunkyPNG::Color
     include CasinoBot::Util
     

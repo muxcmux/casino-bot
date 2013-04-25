@@ -20,7 +20,7 @@ task :refscreens do
       print "Taking screenshot in #{i}...\r"
       sleep 1
     end
-    analyzer = CasinoBot::Analyzer.new color
+    analyzer = CasinoBot::Analyzer.new color, black_ref: '/test/fixtures/black.png', red_ref: '/test/fixtures/red.png'
     analyzer.take_screenshot
     FileUtils.mv(analyzer.tmpfile, CasinoBot.root << "/tmp/#{color}.png")
     puts "Reference screenshot taken for #{color}"
